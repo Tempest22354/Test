@@ -91,18 +91,15 @@ function setupDialogue(
 
 
 // =========================
-// BUTTON SOUND SYSTEM
+// BETTER BUTTON SOUND SYSTEM
 // =========================
 
-let audioContext =
-    null;
+let audioContext = null;
 
 
 function getAudioContext() {
 
-    if (
-        !audioContext
-    ) {
+    if (!audioContext) {
 
         audioContext =
             new (
@@ -134,64 +131,182 @@ function playButtonSound() {
         getAudioContext();
 
 
-    const oscillator =
-        context.createOscillator();
+    const now =
+        context.currentTime;
 
 
-    const volume =
+
+    // -------------------------
+    // SOFT CLICK
+    // -------------------------
+
+    const bufferLength =
+        Math.floor(
+            context.sampleRate *
+            0.025
+        );
+
+
+    const buffer =
+        context.createBuffer(
+            1,
+            bufferLength,
+            context.sampleRate
+        );
+
+
+    const data =
+        buffer.getChannelData(
+            0
+        );
+
+
+    for (
+        let index = 0;
+        index < bufferLength;
+        index++
+    ) {
+
+        const fade =
+            1 -
+            index /
+            bufferLength;
+
+
+        data[index] =
+            (
+                Math.random() *
+                2 -
+                1
+            ) *
+            fade;
+
+    }
+
+
+    const noise =
+        context.createBufferSource();
+
+
+    noise.buffer =
+        buffer;
+
+
+    const filter =
+        context.createBiquadFilter();
+
+
+    filter.type =
+        "highpass";
+
+
+    filter.frequency.value =
+        1800;
+
+
+    const noiseVolume =
         context.createGain();
 
 
-    oscillator.type =
-        "sine";
-
-
-    oscillator.frequency.setValueAtTime(
-        520,
-        context.currentTime
+    noiseVolume.gain.setValueAtTime(
+        0.025,
+        now
     );
 
 
-    oscillator.frequency.exponentialRampToValueAtTime(
-        390,
-        context.currentTime +
-        0.06
-    );
-
-
-    volume.gain.setValueAtTime(
-        0.035,
-        context.currentTime
-    );
-
-
-    volume.gain.exponentialRampToValueAtTime(
+    noiseVolume.gain.exponentialRampToValueAtTime(
         0.001,
-        context.currentTime +
-        0.07
+        now + 0.03
     );
 
 
-    oscillator.connect(
-        volume
+    noise.connect(
+        filter
     );
 
 
-    volume.connect(
+    filter.connect(
+        noiseVolume
+    );
+
+
+    noiseVolume.connect(
         context.destination
     );
 
 
-    oscillator.start();
+    noise.start(
+        now
+    );
 
 
-    oscillator.stop(
-        context.currentTime +
-        0.07
+
+    // -------------------------
+    // TINY LOW POP
+    // -------------------------
+
+    const pop =
+        context.createOscillator();
+
+
+    const popVolume =
+        context.createGain();
+
+
+    pop.type =
+        "sine";
+
+
+    pop.frequency.setValueAtTime(
+        145,
+        now
+    );
+
+
+    pop.frequency.exponentialRampToValueAtTime(
+        95,
+        now + 0.045
+    );
+
+
+    popVolume.gain.setValueAtTime(
+        0.018,
+        now
+    );
+
+
+    popVolume.gain.exponentialRampToValueAtTime(
+        0.001,
+        now + 0.045
+    );
+
+
+    pop.connect(
+        popVolume
+    );
+
+
+    popVolume.connect(
+        context.destination
+    );
+
+
+    pop.start(
+        now
+    );
+
+
+    pop.stop(
+        now + 0.05
     );
 
 }
 
+
+
+// =========================
+// PLAY SOUND ON BUTTON TAP
+// =========================
 
 document.addEventListener(
     "click",
