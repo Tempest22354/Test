@@ -2,294 +2,1097 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Today's Side Quest</title>
-    <link rel="stylesheet" href="style.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Today's Side Quest
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <section id="start-screen" class="screen">
+
+    <!-- START -->
+
+    <section
+        id="start-screen"
+        class="screen"
+    >
+
         <div class="start-card">
-            <p class="eyebrow">SIDE QUEST AVAILABLE</p>
-            <h1>Today's Side Quest</h1>
-            <p class="subtitle">A small adventure awaits...</p>
-            <button id="start-btn">Start</button>
+
+            <p class="eyebrow">
+                SIDE QUEST AVAILABLE
+            </p>
+
+            <h1>
+                Today's Side Quest
+            </h1>
+
+            <p class="subtitle">
+                A small adventure awaits...
+            </p>
+
+            <button id="start-btn">
+                Start
+            </button>
+
         </div>
+
     </section>
 
-    <section id="zanka-screen" class="screen character-screen zanka-theme">
+
+
+    <!-- ZANKA -->
+
+    <section
+        id="zanka-screen"
+        class="screen character-screen zanka-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art zanka-art" src="assets/characters/zanka/main.webp" alt="Zanka">
+
+                <img
+                    class="character-art zanka-art"
+                    src="assets/characters/zanka/main.webp"
+                    alt="Zanka"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Zanka</div>
-                <p id="zanka-dialogue-text" class="dialogue-text">So you're the one everyone's making a fuss about.</p>
-                <button id="zanka-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Zanka
+                </div>
+
+                <p
+                    id="zanka-dialogue-text"
+                    class="dialogue-text"
+                >
+                    So you're the one everyone's making a fuss about.
+                </p>
+
+                <button id="zanka-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="idia-screen" class="screen character-screen idia-theme">
+
+
+    <!-- IDIA -->
+
+    <section
+        id="idia-screen"
+        class="screen character-screen idia-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/idia/intro.png" alt="Idia">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/idia/intro.png"
+                    alt="Idia"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Idia</div>
-                <p id="idia-dialogue-text" class="dialogue-text">Wait... you actually showed up?</p>
-                <button id="idia-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Idia
+                </div>
+
+                <p
+                    id="idia-dialogue-text"
+                    class="dialogue-text"
+                >
+                    Wait... you actually showed up?
+                </p>
+
+                <button id="idia-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="idia-challenge-screen" class="screen challenge-screen idia-game-theme">
+
+
+    <!-- IDIA GAME -->
+
+    <section
+        id="idia-challenge-screen"
+        class="screen challenge-screen idia-game-theme"
+    >
+
         <div class="challenge-card">
-            <p class="quest-label">IDIA'S QUEST</p>
-            <h2>System Breach</h2>
-            <p id="challenge-message" class="challenge-message">Hit the highlighted nodes.</p>
-            <div class="counter">Score: <span id="score">0</span>/5</div>
+
+            <p class="quest-label">
+                IDIA'S QUEST
+            </p>
+
+            <h2>
+                System Breach
+            </h2>
+
+            <p
+                id="challenge-message"
+                class="challenge-message"
+            >
+                Hit the highlighted nodes.
+            </p>
+
+            <div class="counter">
+
+                Score:
+
+                <span id="score">
+                    0
+                </span>
+
+                /5
+
+            </div>
+
+
             <div id="hack-grid">
-                <button class="hack-tile"></button><button class="hack-tile"></button><button class="hack-tile"></button>
-                <button class="hack-tile"></button><button class="hack-tile"></button><button class="hack-tile"></button>
-                <button class="hack-tile"></button><button class="hack-tile"></button><button class="hack-tile"></button>
+
+                <button class="hack-tile"></button>
+                <button class="hack-tile"></button>
+                <button class="hack-tile"></button>
+
+                <button class="hack-tile"></button>
+                <button class="hack-tile"></button>
+                <button class="hack-tile"></button>
+
+                <button class="hack-tile"></button>
+                <button class="hack-tile"></button>
+                <button class="hack-tile"></button>
+
             </div>
-            <button id="finish-hack-btn" class="hidden-button">Continue</button>
+
+
+            <button
+                id="finish-hack-btn"
+                class="hidden-button"
+            >
+                Continue
+            </button>
+
         </div>
+
     </section>
 
-    <section id="idia-result-screen" class="screen character-screen idia-theme">
+
+
+    <!-- IDIA RESULT -->
+
+    <section
+        id="idia-result-screen"
+        class="screen character-screen idia-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/idia/result.png" alt="Idia">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/idia/result.png"
+                    alt="Idia"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Idia</div>
-                <p id="idia-result-text" class="dialogue-text">Okay... you actually cleared it.</p>
-                <button id="idia-result-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Idia
+                </div>
+
+                <p
+                    id="idia-result-text"
+                    class="dialogue-text"
+                >
+                    Okay... you actually cleared it.
+                </p>
+
+                <button id="idia-result-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="kaveh-screen" class="screen character-screen kaveh-theme">
+
+
+    <!-- KAVEH -->
+
+    <section
+        id="kaveh-screen"
+        class="screen character-screen kaveh-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/kaveh/intro.png" alt="Kaveh">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/kaveh/intro.png"
+                    alt="Kaveh"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Kaveh</div>
-                <p id="kaveh-dialogue-text" class="dialogue-text">Finally. I was starting to think you'd never get here.</p>
-                <button id="kaveh-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Kaveh
+                </div>
+
+                <p
+                    id="kaveh-dialogue-text"
+                    class="dialogue-text"
+                >
+                    Finally. I was starting to think you'd never get here.
+                </p>
+
+                <button id="kaveh-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="kaveh-challenge-screen" class="screen challenge-screen kaveh-game-theme">
+
+
+    <!-- KAVEH GAME -->
+
+    <section
+        id="kaveh-challenge-screen"
+        class="screen challenge-screen kaveh-game-theme"
+    >
+
         <div class="challenge-card">
-            <p class="quest-label">KAVEH'S QUEST</p>
-            <h2>Blueprint Repair</h2>
-            <p id="kaveh-challenge-message" class="challenge-message">Put the building pieces in the correct order.</p>
-            <div class="counter">Progress: <span id="kaveh-progress">0</span>/4</div>
+
+            <p class="quest-label">
+                KAVEH'S QUEST
+            </p>
+
+            <h2>
+                Blueprint Repair
+            </h2>
+
+            <p
+                id="kaveh-challenge-message"
+                class="challenge-message"
+            >
+                Put the building pieces in the correct order.
+            </p>
+
+            <div class="counter">
+
+                Progress:
+
+                <span id="kaveh-progress">
+                    0
+                </span>
+
+                /4
+
+            </div>
+
+
             <div id="blueprint-pieces">
-                <button class="blueprint-piece" data-part="roof">Roof</button>
-                <button class="blueprint-piece" data-part="foundation">Foundation</button>
-                <button class="blueprint-piece" data-part="walls">Walls</button>
-                <button class="blueprint-piece" data-part="pillars">Pillars</button>
+
+                <button
+                    class="blueprint-piece"
+                    data-part="roof"
+                >
+                    Roof
+                </button>
+
+
+                <button
+                    class="blueprint-piece"
+                    data-part="foundation"
+                >
+                    Foundation
+                </button>
+
+
+                <button
+                    class="blueprint-piece"
+                    data-part="walls"
+                >
+                    Walls
+                </button>
+
+
+                <button
+                    class="blueprint-piece"
+                    data-part="pillars"
+                >
+                    Pillars
+                </button>
+
             </div>
-            <button id="finish-kaveh-btn" class="hidden-button">Continue</button>
+
+
+            <button
+                id="finish-kaveh-btn"
+                class="hidden-button"
+            >
+                Continue
+            </button>
+
         </div>
+
     </section>
 
-    <section id="kaveh-result-screen" class="screen character-screen kaveh-theme">
+
+
+    <!-- KAVEH RESULT -->
+
+    <section
+        id="kaveh-result-screen"
+        class="screen character-screen kaveh-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/kaveh/result.png" alt="Kaveh">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/kaveh/result.png"
+                    alt="Kaveh"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Kaveh</div>
-                <p id="kaveh-result-text" class="dialogue-text">Huh. You actually fixed it.</p>
-                <button id="kaveh-result-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Kaveh
+                </div>
+
+                <p
+                    id="kaveh-result-text"
+                    class="dialogue-text"
+                >
+                    Huh. You actually fixed it.
+                </p>
+
+                <button id="kaveh-result-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="mikasa-screen" class="screen character-screen mikasa-theme">
+
+
+    <!-- MIKASA -->
+
+    <section
+        id="mikasa-screen"
+        class="screen character-screen mikasa-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/mikasa/intro.png" alt="Mikasa">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/mikasa/intro.png"
+                    alt="Mikasa"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Mikasa</div>
-                <p id="mikasa-dialogue-text" class="dialogue-text">You made it this far.</p>
-                <button id="mikasa-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Mikasa
+                </div>
+
+                <p
+                    id="mikasa-dialogue-text"
+                    class="dialogue-text"
+                >
+                    You made it this far.
+                </p>
+
+                <button id="mikasa-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="mikasa-challenge-screen" class="screen challenge-screen mikasa-game-theme">
+
+
+    <!-- MIKASA GAME -->
+
+    <section
+        id="mikasa-challenge-screen"
+        class="screen challenge-screen mikasa-game-theme"
+    >
+
         <div class="challenge-card">
-            <p class="quest-label">MIKASA'S QUEST</p>
-            <h2>ODM Reflex Drill</h2>
-            <p id="mikasa-challenge-message" class="challenge-message">Move out of the marked lane before it strikes.</p>
+
+            <p class="quest-label">
+                MIKASA'S QUEST
+            </p>
+
+            <h2>
+                ODM Reflex Drill
+            </h2>
+
+            <p
+                id="mikasa-challenge-message"
+                class="challenge-message"
+            >
+                Move out of the marked lane before it strikes.
+            </p>
+
+
             <div class="dual-counter">
-                <span>Dodges: <strong id="mikasa-score">0</strong>/5</span>
-                <span>Hits: <strong id="mikasa-hits">0</strong></span>
+
+                <span>
+
+                    Dodges:
+
+                    <strong id="mikasa-score">
+                        0
+                    </strong>
+
+                    /5
+
+                </span>
+
+
+                <span>
+
+                    Hits:
+
+                    <strong id="mikasa-hits">
+                        0
+                    </strong>
+
+                </span>
+
             </div>
+
+
             <div id="mikasa-arena">
-                <div class="mikasa-lane"></div><div class="mikasa-lane"></div><div class="mikasa-lane"></div>
+
+                <div class="mikasa-lane"></div>
+
+                <div class="mikasa-lane"></div>
+
+                <div class="mikasa-lane"></div>
+
             </div>
+
+
             <div id="mikasa-controls">
-                <button id="mikasa-left-btn">← Left</button>
-                <button id="mikasa-right-btn">Right →</button>
+
+                <button id="mikasa-left-btn">
+                    ← Left
+                </button>
+
+                <button id="mikasa-right-btn">
+                    Right →
+                </button>
+
             </div>
-            <button id="finish-mikasa-btn" class="hidden-button">Continue</button>
+
+
+            <button
+                id="finish-mikasa-btn"
+                class="hidden-button"
+            >
+                Continue
+            </button>
+
         </div>
+
     </section>
 
-    <section id="mikasa-result-screen" class="screen character-screen mikasa-theme">
+
+
+    <!-- MIKASA RESULT -->
+
+    <section
+        id="mikasa-result-screen"
+        class="screen character-screen mikasa-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/mikasa/result.png" alt="Mikasa">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/mikasa/result.png"
+                    alt="Mikasa"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Mikasa</div>
-                <p id="mikasa-result-text" class="dialogue-text">You kept moving. Good.</p>
-                <button id="mikasa-result-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Mikasa
+                </div>
+
+                <p
+                    id="mikasa-result-text"
+                    class="dialogue-text"
+                >
+                    You kept moving. Good.
+                </p>
+
+                <button id="mikasa-result-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="sigma-screen" class="screen character-screen sigma-theme">
+
+
+    <!-- SIGMA -->
+
+    <section
+        id="sigma-screen"
+        class="screen character-screen sigma-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art tall-character" src="assets/characters/sigma/intro.png" alt="Sigma">
+
+                <img
+                    class="character-art tall-character"
+                    src="assets/characters/sigma/intro.png"
+                    alt="Sigma"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Sigma</div>
-                <p id="sigma-dialogue-text" class="dialogue-text">You found your way here.</p>
-                <button id="sigma-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Sigma
+                </div>
+
+                <p
+                    id="sigma-dialogue-text"
+                    class="dialogue-text"
+                >
+                    You found your way here.
+                </p>
+
+                <button id="sigma-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="sigma-challenge-screen" class="screen challenge-screen sigma-game-theme">
+
+
+    <!-- SIGMA PATTERN GAME -->
+
+    <section
+        id="sigma-challenge-screen"
+        class="screen challenge-screen sigma-game-theme"
+    >
+
         <div class="challenge-card">
-            <p class="quest-label">SIGMA'S QUEST</p>
-            <h2>Memory Check</h2>
-            <p id="sigma-challenge-message" class="challenge-message">Watch carefully.</p>
-            <div class="counter">Correct: <span id="sigma-score">0</span>/4</div>
+
+            <p class="quest-label">
+                SIGMA'S QUEST
+            </p>
+
+            <h2>
+                Pattern Memory
+            </h2>
+
+            <p
+                id="sigma-challenge-message"
+                class="challenge-message"
+            >
+                Remember the pattern.
+            </p>
+
+
+            <div class="counter">
+
+                Round:
+
+                <span id="sigma-score">
+                    0
+                </span>
+
+                /4
+
+            </div>
+
+
             <div id="sigma-grid">
-                <button class="sigma-card">?</button><button class="sigma-card">?</button>
-                <button class="sigma-card">?</button><button class="sigma-card">?</button>
+
+                <button class="sigma-card">
+                    ?
+                </button>
+
+                <button class="sigma-card">
+                    ?
+                </button>
+
+                <button class="sigma-card">
+                    ?
+                </button>
+
+                <button class="sigma-card">
+                    ?
+                </button>
+
             </div>
-            <button id="finish-sigma-btn" class="hidden-button">Continue</button>
+
+
+            <button
+                id="finish-sigma-btn"
+                class="hidden-button"
+            >
+                Continue
+            </button>
+
         </div>
+
     </section>
 
-    <section id="sigma-result-screen" class="screen character-screen sigma-theme">
+
+
+    <!-- SIGMA RESULT -->
+
+    <section
+        id="sigma-result-screen"
+        class="screen character-screen sigma-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/sigma/result.png" alt="Sigma">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/sigma/result.png"
+                    alt="Sigma"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">Sigma</div>
-                <p id="sigma-result-text" class="dialogue-text">You remembered all of them.</p>
-                <button id="sigma-result-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    Sigma
+                </div>
+
+                <p
+                    id="sigma-result-text"
+                    class="dialogue-text"
+                >
+                    You remembered all of them.
+                </p>
+
+                <button id="sigma-result-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="william-screen" class="screen character-screen william-theme">
+
+
+    <!-- WILLIAM -->
+
+    <section
+        id="william-screen"
+        class="screen character-screen william-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art tall-character" src="assets/characters/william/intro.png" alt="William">
+
+                <img
+                    class="character-art tall-character"
+                    src="assets/characters/william/intro.png"
+                    alt="William"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">William</div>
-                <p id="william-dialogue-text" class="dialogue-text">You've arrived at last.</p>
-                <button id="william-next-btn">Continue</button>
+
+                <div class="nameplate">
+                    William
+                </div>
+
+                <p
+                    id="william-dialogue-text"
+                    class="dialogue-text"
+                >
+                    You've arrived at last.
+                </p>
+
+                <button id="william-next-btn">
+                    Continue
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="william-challenge-screen" class="screen challenge-screen william-game-theme">
+
+
+    <!-- WILLIAM GAME -->
+
+    <section
+        id="william-challenge-screen"
+        class="screen challenge-screen william-game-theme"
+    >
+
         <div class="challenge-card">
-            <p class="quest-label">WILLIAM'S QUEST</p>
-            <h2>Deduction</h2>
-            <p id="william-question" class="question-text"></p>
-            <p id="william-feedback" class="challenge-message">Choose the most logical conclusion.</p>
-            <div class="counter">Solved: <span id="william-progress">0</span>/3</div>
+
+            <p class="quest-label">
+                WILLIAM'S QUEST
+            </p>
+
+            <h2>
+                Deduction
+            </h2>
+
+            <p
+                id="william-question"
+                class="question-text"
+            >
+            </p>
+
+            <p
+                id="william-feedback"
+                class="challenge-message"
+            >
+                Choose the most logical conclusion.
+            </p>
+
+
+            <div class="counter">
+
+                Solved:
+
+                <span id="william-progress">
+                    0
+                </span>
+
+                /3
+
+            </div>
+
+
             <div id="william-options">
+
                 <button class="william-option"></button>
+
                 <button class="william-option"></button>
+
                 <button class="william-option"></button>
+
             </div>
-            <button id="finish-william-btn" class="hidden-button">Continue</button>
+
+
+            <button
+                id="finish-william-btn"
+                class="hidden-button"
+            >
+                Continue
+            </button>
+
         </div>
+
     </section>
 
-    <section id="william-result-screen" class="screen character-screen william-theme">
+
+
+    <!-- WILLIAM RESULT -->
+
+    <section
+        id="william-result-screen"
+        class="screen character-screen william-theme"
+    >
+
         <div class="scene">
+
             <div class="character-area">
-                <img class="character-art" src="assets/characters/william/result.png" alt="William">
+
+                <img
+                    class="character-art"
+                    src="assets/characters/william/result.png"
+                    alt="William"
+                >
+
             </div>
+
+
             <div class="dialogue-box">
-                <div class="nameplate">William</div>
-                <p id="william-result-text" class="dialogue-text">So, you solved it.</p>
-                <button id="william-result-next-btn">Finish</button>
+
+                <div class="nameplate">
+                    William
+                </div>
+
+                <p
+                    id="william-result-text"
+                    class="dialogue-text"
+                >
+                    So, you solved it.
+                </p>
+
+                <button id="william-result-next-btn">
+                    Finish
+                </button>
+
             </div>
+
         </div>
+
     </section>
 
-    <section id="kazuha-cutscene" class="screen">
+
+
+    <!-- KAZUHA -->
+
+    <section
+        id="kazuha-cutscene"
+        class="screen"
+    >
+
         <div class="kazuha-cinematic">
+
             <img
                 id="kazuha-cutscene-image"
                 class="kazuha-cutscene-image"
                 src="assets/characters/kazuha/kazuha_beneath_the_maple_twilight.png"
                 alt="Kazuha"
             >
+
+
             <div class="kazuha-cinematic-overlay"></div>
-            <div id="kazuha-wind" class="kazuha-wind">
-                <span></span><span></span><span></span><span></span>
+
+
+            <div
+                id="kazuha-wind"
+                class="kazuha-wind"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
             </div>
-            <div id="kazuha-leaves" class="kazuha-leaves"></div>
-            <button id="kazuha-skip-btn" class="kazuha-skip-btn">Skip</button>
-            <p id="kazuha-cinematic-text" class="kazuha-cinematic-text"></p>
-            <div id="kazuha-dialogue-box" class="kazuha-dialogue-box">
-                <div class="kazuha-nameplate">Kazuha</div>
-                <p id="kazuha-dialogue-text" class="kazuha-dialogue-text"></p>
-                <button id="kazuha-next-btn">Continue</button>
+
+
+            <div
+                id="kazuha-leaves"
+                class="kazuha-leaves"
+            >
             </div>
+
+
+            <button
+                id="kazuha-skip-btn"
+                class="kazuha-skip-btn"
+            >
+                Skip
+            </button>
+
+
+            <p
+                id="kazuha-cinematic-text"
+                class="kazuha-cinematic-text"
+            >
+            </p>
+
+
+            <div
+                id="kazuha-dialogue-box"
+                class="kazuha-dialogue-box"
+            >
+
+                <div class="kazuha-nameplate">
+                    Kazuha
+                </div>
+
+                <p
+                    id="kazuha-dialogue-text"
+                    class="kazuha-dialogue-text"
+                >
+                </p>
+
+                <button id="kazuha-next-btn">
+                    Continue
+                </button>
+
+            </div>
+
         </div>
+
     </section>
 
-    <section id="final-screen" class="screen final-screen">
-        <div class="final-leaf final-leaf-one">🍁</div>
-        <div class="final-leaf final-leaf-two">🍁</div>
-        <div class="final-leaf final-leaf-three">🍁</div>
+
+
+    <!-- FINAL -->
+
+    <section
+        id="final-screen"
+        class="screen final-screen"
+    >
+
+        <div class="final-leaf final-leaf-one">
+            🍁
+        </div>
+
+
+        <div class="final-leaf final-leaf-two">
+            🍁
+        </div>
+
+
+        <div class="final-leaf final-leaf-three">
+            🍁
+        </div>
+
 
         <div class="final-card">
-            <p class="eyebrow">QUEST COMPLETE</p>
-            <h1>Happy Birthday 🎉</h1>
-            <p class="final-text">Looks like today's side quest is finally complete.</p>
+
+            <p class="eyebrow">
+                QUEST COMPLETE
+            </p>
+
+            <h1>
+                Happy Birthday 🎉
+            </h1>
+
             <p class="final-text">
+                Looks like today's side quest is finally complete.
+            </p>
+
+            <p class="final-text">
+
                 Hope this year gives you good people,
                 ridiculous memories, peaceful days,
                 and plenty of reasons to smile.
+
             </p>
-            <p class="final-kazuha-line">May the wind carry you toward something wonderful.</p>
+
+
+            <p class="final-kazuha-line">
+                May the wind carry you toward something wonderful.
+            </p>
+
+
             <div class="final-buttons">
-                <button id="replay-kazuha-btn">Replay Kazuha Scene</button>
-                <button id="play-again-btn">Play Again</button>
+
+                <button id="replay-kazuha-btn">
+                    Replay Kazuha Scene
+                </button>
+
+
+                <button id="play-again-btn">
+                    Play Again
+                </button>
+
             </div>
-            <p class="fan-credit">Fan-made, non-commercial birthday project.</p>
+
+
+            <p class="fan-credit">
+                Fan-made, non-commercial birthday project.
+            </p>
+
         </div>
+
     </section>
+
+
 
     <script src="game.js"></script>
 
+
 </body>
+
 </html>
